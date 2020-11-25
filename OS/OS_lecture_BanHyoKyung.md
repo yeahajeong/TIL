@@ -77,7 +77,7 @@
 
 #### 컴퓨터 시스템 구조
 
-![컴퓨터시스템구조](https://user-images.githubusercontent.com/58287684/100165035-8e5c9300-2efc-11eb-814c-4c9d318ef20e.png)
+![image](https://user-images.githubusercontent.com/58287684/100174633-22842580-2f10-11eb-8643-52a899b35115.png)
 
 - `CPU` : 인스트럭션만 실행하는것이 CPU의 숙명. 메모리 몇번지에 있는 일을 하라 라는 것이 적혀있음
 - `timer` : 특정 프로그램이 CPU를 독점하는 것을 막기 위해 만료시간을 정해둔다. 할당 시간이 초과한다면 인터럽트를 발생시켜 CPU에게 알려준다.
