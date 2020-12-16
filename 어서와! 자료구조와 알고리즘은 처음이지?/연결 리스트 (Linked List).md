@@ -7,6 +7,8 @@
 - **Data** : 정수, 문자열, 레코드...
 - **A set of operations** : 삽입, 삭제, 순회... 정렬, 탐색...
 
+---
+
 
 
 ## ✔ 기본적 연결 리스트
@@ -26,11 +28,13 @@
 - 노드는 Data와 Link(Next)를 가지고 있다.
 - 노드 내의 데이터는 다른 구조로 이루어질 수 있다 (문자열, 레코드, 또 다른 연결 리스트 등)
 
+---
+
 
 
 ## ✔ 자료구조 정의
 
-#### 💡 Node 클래스
+### 💡 Node 클래스
 
 ![image](https://user-images.githubusercontent.com/58287684/102360826-da7b8e80-3ff5-11eb-9a5a-19339964e117.png)
 
@@ -45,7 +49,7 @@ class Node:
 
 
 
-#### 💡 LinkedList 클래스
+### 💡 LinkedList 클래스
 
 ![image](https://user-images.githubusercontent.com/58287684/102364147-7eb30480-3ff9-11eb-8fdf-6b274e715f67.png)
 
@@ -58,19 +62,23 @@ class LinkedList:
         self.tail = None
 ```
 
+---
+
 
 
 ## ✔ 배열과 비교한 연결 리스트
 
 ![image](https://user-images.githubusercontent.com/58287684/102361071-29c1bf00-3ff6-11eb-9cc2-bdd695ac3e8d.png)
 
-#### 💡 선형 배열에 비해 연결 리스트가 가지는 이점은?
+### 💡 선형 배열에 비해 연결 리스트가 가지는 이점은?
 
 연결 리스트에서는 원소들이 링크(link)라고 부르는 고리로 연결되어 있으므로, 가운데에서 끊어 원소 하나를 삭제하거나, 삽입하는 것이 선형 배열의 경우보다 빠른 시간내에 처리할 수 있다. 따라서 원소의 삽입/삭제가 빈번히 일어나는 응용에서 연결 리스트가 많이 이용된다. 컴퓨터 시스템을 구성하는 중요한 요소인 운영체제(operating system)의 내부에서도 이러한 연결 리스트가 여러 곳에서 이용되고 있다.
 
-#### 💡 그렇다면 단점은?
+### 💡 그렇다면 단점은?
 
 선형 배열에 비해서 데이터 구조표현에 소요되는 저장 공간(메모리) 소요가 크다. 또 "k번째 원소"를 찾아가는데 선형 배열보다 오랜시간이 걸린다. (앞에서부터 특정원소까지 하나씩 링크를 따라가며 찾아야 하니까)
+
+---
 
 
 
@@ -85,7 +93,9 @@ class LinkedList:
 
 
 
-#### 💡 특정 원소 참조 getAt
+
+
+### 💡 특정 원소 참조 getAt
 
 ![image](https://user-images.githubusercontent.com/58287684/102361294-6e4d5a80-3ff6-11eb-9bbd-161911f771f0.png)
 
@@ -111,7 +121,9 @@ class LinkedList:
 
 
 
-#### 💡 리스트 순회 traverse
+
+
+### 💡 리스트 순회 traverse
 
 ```python
 	...
@@ -127,7 +139,9 @@ class LinkedList:
 
 
 
-#### 💡 길이 얻어내기 getLength
+
+
+### 💡 길이 얻어내기 getLength
 
 ```python
 	...
@@ -138,7 +152,9 @@ class LinkedList:
 
 
 
-#### 💡 원소의 삽입 insertAt
+
+
+### 💡 원소의 삽입 insertAt
 
 원소가 삽입될 수 있는 조건 1 <= pos <= nodeCount + 1 이 범위 안에만 삽입할 수 있다.
 
@@ -146,7 +162,7 @@ newNode를 삽입하고 성공/실패에 따라 True/False를 리턴한다.
 
 
 
-###### 🗣 원소의 삽입 흐름
+#### 🐟 원소의 삽입 흐름
 
 ![image](https://user-images.githubusercontent.com/58287684/102361999-372b7900-3ff7-11eb-9019-05aadb8dfbd1.png)
 
@@ -156,7 +172,7 @@ newNode를 삽입하고 성공/실패에 따라 True/False를 리턴한다.
 
 
 
-###### 🗣 코드 구현시 주의사항
+#### 🐟 코드 구현시 주의사항
 
 1. 삽입하려는 위치가 리스트 맨 앞일 때
    - prev 없음
@@ -168,7 +184,7 @@ newNode를 삽입하고 성공/실패에 따라 True/False를 리턴한다.
 
 
 
-###### 🗣 파이썬 코드 구현
+#### 🐟 파이썬 코드 구현
 
 ```python
 	...
@@ -205,7 +221,7 @@ newNode를 삽입하고 성공/실패에 따라 True/False를 리턴한다.
 
 
 
-###### 🗣 시간 복잡도
+#### 🐟 시간 복잡도
 
 - 맨 앞에 삽입하는 경우 O(1)
 - 중간에 삽입하는 경우 O(n)
@@ -213,7 +229,9 @@ newNode를 삽입하고 성공/실패에 따라 True/False를 리턴한다.
 
 
 
-#### 💡 원소의 삭제 def pop(self, pos)
+
+
+### 💡 원소의 삭제 def pop(self, pos)
 
 pos의 위치가 1<= pos <= nodeCount 안에 위치해야한다.
 
@@ -221,7 +239,7 @@ pos의 위치가 1<= pos <= nodeCount 안에 위치해야한다.
 
 
 
-###### 🗣 원소의 삭제 흐름
+#### 🐟 원소의 삭제 흐름
 
 ![image](https://user-images.githubusercontent.com/58287684/102362778-1e6f9300-3ff8-11eb-9644-209708ca1596.png)
 
@@ -229,7 +247,7 @@ pos의 위치가 1<= pos <= nodeCount 안에 위치해야한다.
 
 ![image](https://user-images.githubusercontent.com/58287684/102362924-44953300-3ff8-11eb-911e-38ac85f92803.png)
 
-###### 🗣 코드 구현 주의사항
+#### 🐟 코드 구현 주의사항
 
 1. 삭제하려는 node가 맨 앞의 것일 때
    - prev가 없음
@@ -245,7 +263,7 @@ pos의 위치가 1<= pos <= nodeCount 안에 위치해야한다.
 
 
 
-###### 🗣 파이썬 코드 구현
+#### 🐟 파이썬 코드 구현
 
 ```python
 	...
@@ -283,7 +301,7 @@ pos의 위치가 1<= pos <= nodeCount 안에 위치해야한다.
 
 
 
-###### 🗣 시간 복잡도
+#### 🐟 시간 복잡도
 
 - 맨 앞에서 삭제하는 경우 O(1)
 - 중간에서 삭제하는 경우 O(n)
@@ -291,19 +309,21 @@ pos의 위치가 1<= pos <= nodeCount 안에 위치해야한다.
 
 
 
-#### 💡 두 리스트의 연결 def concat(self, L)
+
+
+### 💡 두 리스트의 연결 def concat(self, L)
 
 연결 리스트 self 의 뒤에 또 다른 연결 리스트인 L 을 이어붙임
 
 
 
-###### 🗣 두 리스트의 연결 흐름
+#### 🐟 두 리스트의 연결 흐름
 
 ![image](https://user-images.githubusercontent.com/58287684/102363624-ed439280-3ff8-11eb-9581-6e807bd11fef.png)
 
 
 
-###### 🗣 파이썬 코드 구현
+#### 🐟 파이썬 코드 구현
 
 ```python
 	...
