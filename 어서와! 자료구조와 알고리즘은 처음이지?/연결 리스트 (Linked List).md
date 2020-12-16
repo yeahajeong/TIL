@@ -47,7 +47,7 @@ class Node:
 
 #### 💡 LinkedList 클래스
 
-![image-20201216232539205](C:\Users\WorkPC\AppData\Roaming\Typora\typora-user-images\image-20201216232539205.png)
+![image](https://user-images.githubusercontent.com/58287684/102364147-7eb30480-3ff9-11eb-8fdf-6b274e715f67.png)
 
 ```python
 # LinkedList 클래스
